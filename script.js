@@ -20,8 +20,8 @@ scotchApp.config(function($routeProvider) {
         })
 
         // route for the contact page
-        .when('/contact', {
-            templateUrl : 'pages/contact.html',
+        .when('/example', {
+            templateUrl : 'pages/example.html',
             controller  : 'contactController'
         });
 });
@@ -38,5 +38,13 @@ scotchApp.controller('aboutController', function($scope) {
 });
 
 scotchApp.controller('contactController', function($scope) {
-    $scope.message = 'Contact us! JK. This is just a demo.';
+    $scope.task = []
+    $scope.addTask = function(){
+      var newId = $scope.task.length;
+      newId++;
+      $scope.task.push(
+        {id: newId, toDo: $scope.addToDo}
+      )
+            $scope.textInp.placeholder = '';
+    }
 });
