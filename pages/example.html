@@ -1,25 +1,12 @@
 <!-- contact.html -->
-<div class="jumbotron text-center">
-    <h1>To Do List</h1>
-</div>
-<div id="toDoTable">
-  <table>
-    <thead>
-      <th>Tasks</th>
-    </thead>
-    <tbody>
-      <tr ng-repeat="thing in task">
-        <td><input type="checkbox"
-               ng-model="string"
-               [name="string"]
-               [ng-true-value="expression"]
-               [ng-false-value="expression"]
-               [ng-change="string"]>
-               {{thing.toDo}}</td>
-      </tr>
-      <tr>
-        <td><input id="textInp" ng-model="addToDo" type="text" placeholder=""></input></td>
-        <td><button ng-click="addTask()">Add Task</button></td>
-      </tr>
-  </table>
+<div  class="jumbotron text-center">
+    <h1>Angular.js Example</h1>
+    <h2>To-do List</h2>
+      <h3>Tasks</h3>
+      <div ng-repeat="thing in task">
+        <input type="checkbox" ng-model="thing.done"> <span ng-bind="thing.toDo"></span>
+      </div>
+      <input id="textInp" ng-model="addToDo" type="text" placeholder="todo"></input>
+      <button ng-click="addTask()">Add Task</button>
+      <button ng-click="remove()">Remove marked</button>
 </div>

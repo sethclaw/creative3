@@ -2,16 +2,16 @@
 <!DOCTYPE html>
 <html ng-app="scotchApp">
 <head>
-  <!-- SCROLLS -->
-  <!-- load bootstrap and fontawesome via CDN -->
+
+  <!-- bootstrap and font-awesome -->  
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
-  <link rel="stylesheet" href="./example.css" />
+  <link rel="stylesheet" href="./main.css" />
 
-  <!-- SPELLS -->
-  <!-- load angular and angular route via CDN -->
+  <!--angular and angular route-->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <!--local script -->
   <script src="./script.js"></script>
 
 </head>
@@ -27,18 +27,17 @@
 
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                <li><a href="#example"><i class="fa fa-cogs"></i> To Do List</a></li>
+                <li><a href="#about"><i class="fa fa-info-circle"></i> About</a></li>
+                <li><a href="#example"><i class="fa fa-cogs"></i>Example</a></li>
             </ul>
         </div>
         </nav>
     </header>
 
-    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <!-- main content-->
     <div id="main">
-        {{ message }}
-        <!-- angular templating -->
-        <!-- this is where content will be injected -->
+
+        <!-- inject content here!-->
         <div ng-view></div>
     </div>
 
