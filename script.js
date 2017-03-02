@@ -34,7 +34,7 @@ scotchApp.controller('mainController', function($scope) {
     				'Notice how the whole page does not while clicking between tabs.';
 });
 scotchApp.controller('aboutController', function($scope) {
-    $scope.message = 'As you can see, This content on the website changes when you click the links'+
+    $scope.message = 'As you can see, the content on the website changes when you click the links '+
     					'but the page does not reload. This is because we are using the AngularJS Route module.' +
     					'This type of page is called a Single Page Application. Check out our AngularJS Example to-do list!';
 });
